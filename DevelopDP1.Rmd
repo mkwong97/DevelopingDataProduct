@@ -1,0 +1,33 @@
+---
+title: "Develop_DP_assignment1"
+output: html_document
+keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My First Leaflet Map
+Create a leaflet map object.
+```{r cars}
+library(leaflet)
+map <- leaflet() %>% addTiles()
+```
+
+Create a marker with a picture of White House and a link to its wikipedia
+```{r}
+WhiteHouseIcon <- makeIcon(
+   iconUrl = "https://i1.wp.com/www.hisour.com/wp-content/uploads/2017/03/The-White-House.jpg",
+   iconWidth = 30*408/255, iconHeight = 30,
+   iconAnchorX = 30*408/255/2, iconAnchorY = 30/2
+)
+```
+
+Add the marker to the map and display the map.
+```{r}
+WhiteHousePopup <- c("<a href= 'https://en.wikipedia.org/wiki/White_House' >White House<br><img src='https://i1.wp.com/www.hisour.com/wp-content/uploads/2017/03/The-White-House.jpg' width='210' height='132'  alt='White House' title='White House'></a>")
+map %>%
+   addTiles() %>%
+   addMarkers(lat=38.8976763, lng=-77.0365298, popup = WhiteHousePopup)
+```
