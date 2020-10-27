@@ -1,6 +1,7 @@
 ---
-title: "Develop_DP_assignment1"
+title: "Developing Data Product Assignment 1"
 output: html_document
+date: 27 Oct 2020
 keep_md: yes
 ---
 
