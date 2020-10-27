@@ -16,7 +16,7 @@ library(leaflet)
 map <- leaflet() %>% addTiles()
 ```
 
-Create a marker with a picture of White House and a link to its wikipedia
+Create a marker with a picture of White House and a link to its wikipedia.
 ```{r}
 WhiteHouseIcon <- makeIcon(
    iconUrl = "https://i1.wp.com/www.hisour.com/wp-content/uploads/2017/03/The-White-House.jpg",
